@@ -1,6 +1,5 @@
 buildscript {
   repositories {
-    maven { url "http://repo.spring.io/libs-milestone" }
     maven { url "http://repo.spring.io/libs-snapshot" }
     mavenLocal()
   }
@@ -25,10 +24,9 @@ eclipse {
 }
 
 repositories {
-  mavenLocal()
-  maven { url "http://repo.spring.io/milestone" }
   mavenCentral()
-  maven { url "http://repo.spring.io/libs-milestone-local" }
+  maven { url "https://repo.spring.io/libs-milestone-local" }
+  maven { url "https://repo.spring.io/libs-snapshot-local" }
 }
 
 dependencies {
@@ -40,14 +38,14 @@ dependencies {
   compile("org.springframework.boot:spring-boot-starter-web")
   compile("org.springframework.boot:spring-boot-starter-jdbc")
   compile("com.h2database:h2")
-  
+
   compile("org.webjars:bootstrap:3.3.6")
 
   compile("org.springframework.boot:spring-boot-starter-actuator")
   compile("org.springframework.boot:spring-boot-devtools")
 
   compile("org.springframework.social:spring-social-security")
-  
+
   testCompile("org.springframework.boot:spring-boot-starter-test")
 }
 
